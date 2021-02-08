@@ -1,0 +1,9 @@
+User-Agent: *
+Disallow: /tilda/form*
+Disallow: /tilda/record-*
+Disallow: /tilda/click*
+Disallow: /tilda/scroll*
+Disallow: /tilda/popup*
+Disallow:
+Sitemap: http://apvikna.com.ua/sitemap.xml
+Host: apvikna.com.ua
