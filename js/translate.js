@@ -20,9 +20,11 @@ function changeLang() {
 }
 
 function preSelect() {
-    let selectLang = document.getElementById("record-language-selection");
-    selectLang.value = (!sessionStorage.getItem('lang')) ? "Uk" : sessionStorage.getItem('lang');
-    changeLang();
+    let selectLang;
+    if (selectLang = document.getElementById("record-language-selection")) {
+        selectLang.value = (!sessionStorage.getItem('lang')) ? "Uk" : sessionStorage.getItem('lang');
+    }
+    setTimeout(changeLang, 50);
 }
 
 function setTextContent() {
