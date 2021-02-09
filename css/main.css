@@ -7,10 +7,21 @@
     }
 }
 
+#record-language-selection {
+    max-width: 100%;
+    border: none
+}
+
+.change_language {
+    outline: none;
+    padding-top: 10px;
+}
+
 #record-language-selection,
 .change_language {
     display: -webkit-box;
     display: flex;
+    border: 0px;
     -webkit-box-align: center;
     align-items: center;
     flex-wrap: nowrap;
@@ -18,14 +29,26 @@
     text-transform: uppercase;
     -webkit-transition: .3s;
     transition: .3s;
-    color: rgba(0, 0, 0, .54);
     font-size: 13px;
-    font-weight: 700;
     line-height: 26px;
     letter-spacing: .33px;
-    padding: 5px 10px;
-    padding-right: 25px;
-    border: 0px;
+    padding: 5px;
+    outline: none;
+    color: #505e6d;
+    font-size: 14px;
+    font-weight: 600;
+    font-family: Tinos;
+    margin: 0 15px;
+}
+
+#record-language-selection option {
+    padding-top: 15px;
+    width: 100px;
+    height: 100px;
+}
+
+#record-language-selection:hover {
+    color: #50aab2 !important;
 }
 
 #record-header-block .t-menu__link-item {
