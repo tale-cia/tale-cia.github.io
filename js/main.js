@@ -69,7 +69,7 @@ if (!document.getElementById('t-phonemask-script')) {
 } else {
     $(document).ready(function() {
         if (typeof t_form_phonemask_load == 'function') {
-            t_form_phonemask_load($('#record-contact-us-block [data-phonemask-lid=1495810359387]'));
+            t_form_phonemask_load($('#record-contact-us-block[data-phonemask-lid=telmask]'));
         }
     });
 }
@@ -86,25 +86,3 @@ $(document).ready(function() {
         console.log('Android css hack was inited');
     }
 });
-
-// Tilda copyright. Don't remove this line
-// Stat 
-// if (!window.mainTracker) {
-//     window.mainTracker = 'tilda';
-// }(function(d, w, k, o, g) {
-//     var n = d.getElementsByTagName(o)[0],
-//         s = d.createElement(o),
-//         f = function() {
-//             n.parentNode.insertBefore(s, n);
-//         };
-//     s.type = "text/javascript";
-//     s.async = true;
-//     s.key = k;
-//     s.id = "tildastatscript";
-//     s.src = g;
-//     if (w.opera == "[object Opera]") {
-//         d.addEventListener("DOMContentLoaded", f, false);
-//     } else {
-//         f();
-//     }
-// })(document, window, '5b36f20db4f99e50afade13d06cc875d', 'script', 'https://stat.tildacdn.com/js/tildastat-0.2.min.js');
