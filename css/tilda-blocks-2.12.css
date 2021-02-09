@@ -1176,10 +1176,6 @@
     cursor: pointer;
     margin-left: .5rem;
     margin-right: .5rem;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -khtml-user-select: none;
-    -ms-user-select: none
 }
 
 .t-form .uploadcare-widget-button {
