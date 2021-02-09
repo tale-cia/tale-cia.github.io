@@ -1,6 +1,4 @@
-$(document).ready(function() {
-    preSelect();
-});
+preSelect();
 
 function changeLang() {
     let selectLang = document.getElementById("record-language-selection");
@@ -16,14 +14,13 @@ function changeLang() {
     fileRef.setAttribute("src", 'js/lang' + lang + '.json');
     fileRef.setAttribute("id", "scriptLang" + lang)
     document.getElementsByTagName("head")[0].appendChild(fileRef);
-    setTimeout(setTextContent, 100); // looks like it needs time to load the file, that's why we give this time
+    setTimeout(setTextContent, 200); // looks like it needs time to load the file, that's why we give this time
 }
 
 function preSelect() {
     let selectLang = document.getElementById("record-language-selection");
-    console.log(selectLang)
     selectLang.value = (!sessionStorage.getItem('lang')) ? "Uk" : sessionStorage.getItem('lang');
-    changeLang();
+    setTimeout(changeLang, 100); // just in case
 }
 
 function setTextContent() {
