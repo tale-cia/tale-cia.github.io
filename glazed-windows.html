@@ -166,11 +166,6 @@
                             <div style="display: block;">
                                 <a href="/" style="color:#ffffff;"> <img src="images/tild3764-3364-4839-b535-323630373965__logos.png" class="navtab__imglogo navtab__imglogomobile" imgfield="img" style="max-width: 90px; width: 90px;" alt=" ApVikna "> </a>
                             </div>
-                            <div class="language">
-                                <div id="lang_ua" class="change_language" onclick="changeLang('Uk')">UA</div>
-                                <div class="slash"> | </div>
-                                <div id="lang_ru" class="change_language" onclick="changeLang('Ru')">RU</div>
-                            </div>
                         </div>
                         <div id="record-navheader-list" class="navtab__rightwrapper navtab__menualign_right" style="padding-right:20px;">
                             <ul class="navtab__list">
@@ -205,6 +200,12 @@
                                 </li>
                                 <li class="navtab__list_item">
                                     <a id="record-header-contacts" class="t-menu__link-item" href="contacts.html" data-menu-submenu-hook="" style="color:#505e6d;font-size:14px;font-weight:600;font-family:Tinos;margin:0 15px;" data-menu-item-number="6"></a>
+                                </li>
+                                <li class="navtab__list_item">
+                                    <select id="record-language-selection" onchange="changeLang()">
+                                        <option class="change_language" value="Uk">ua</option>
+                                        <option class="change_language" value="Ru">ru</option>
+                                    </select>
                                 </li>
                             </ul>
                         </div>
