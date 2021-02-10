@@ -279,7 +279,12 @@ function navTab_createMobileMenu(recid) {
         menu.fadeToggle(300);
         $(this).toggleClass("navtab_opened")
     });
-    $(window).bind('resize', t_throttle(function() { window_width = $(window).width(); if (window_width > 980) { menu.fadeIn(0) } }, 200))
+    $(window).bind('resize', t_throttle(function() {
+        window_width = $(window).width();
+        if (window_width > 980) {
+            menu.fadeIn(0)
+        }
+    }, 200))
 }
 
 function contactUs_onSuccess(contactUs_form) {

@@ -21,8 +21,10 @@ function changeLang() {
 
 function preSelect() {
     let selectLang;
+    console.log("preselect ");
     if (selectLang = document.getElementById("record-language-selection")) {
         selectLang.value = (!sessionStorage.getItem('lang')) ? "Uk" : sessionStorage.getItem('lang');
+        console.log("lang is ", selectLang.value);
     }
     setTimeout(changeLang, 50);
 }

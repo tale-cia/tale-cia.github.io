@@ -32,7 +32,6 @@ $(document).ready(function() {
         });
     }, 500);
 
-    navTab_highlight();
     navTab_checkAnchorLinks('header-block');
     navTab_setBg('header-block');
     navTab_changebgopacitymenu('header-block');
@@ -40,6 +39,7 @@ $(document).ready(function() {
 
     setTimeout(function() { t_menusub_init('header-block'); }, 500);
 
+    navTab_highlight();
     $('#record-header-block .navtab__list .navtab__list_item').each(function(e) {
         if ($(this).find('.t-menu__link-item').hasClass('t-active')) {
             $(this).css('background', '#EBF2F3');
@@ -57,9 +57,10 @@ $(document).ready(function() {
 
     if (document.getElementById("record-our-production")) { ourProduction_init('our-production'); }
 
-    if (document.getElementById("record-subtab-windows")) {
-        subTab_init('subtab-windows');
+    if (document.querySelector(".subtab-record")) {
         if (document.getElementById("record-subtab-windows")) {
+            subTab_init('subtab-windows');
+
             t_sldsInit('standart-w');
             t_sldsInit('not-standart-w');
             t_sldsInit('sliding-system-w');
@@ -77,6 +78,8 @@ $(document).ready(function() {
             });
         }
         if (document.getElementById("record-subtab-doors")) {
+            subTab_init('subtab-doors');
+
             t_sldsInit('single-leaf');
             t_sldsInit('bivalve-shtulp');
             t_sldsInit('sliding-systems');
@@ -91,6 +94,8 @@ $(document).ready(function() {
             });
         }
         if (document.getElementById("record-subtab-equipment")) {
+            subTab_init('subtab-equipment');
+
             t_sldsInit('protective-shutters');
             t_sldsInit('roller-shutters');
             t_sldsInit('jalousie');
@@ -114,6 +119,8 @@ $(document).ready(function() {
             });
         }
         if (document.getElementById("record-subtab-systems")) {
+            subTab_init('subtab-systems');
+
             t_sldsInit('profile-wds');
             t_sldsInit('profile-internova');
 
@@ -125,6 +132,8 @@ $(document).ready(function() {
             });
         }
         if (document.getElementById("record-subtab-glazed-windows")) {
+            subTab_init('subtab-glazed-windows');
+
             t_sldsInit('standart');
             t_sldsInit('not-standart');
             t_sldsInit('decorative');

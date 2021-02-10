@@ -9,27 +9,18 @@
 
 #record-language-selection {
     max-width: 100%;
-    border: none
-}
-
-.change_language {
-    outline: none;
-    padding-top: 10px;
+    border: none;
 }
 
 #record-language-selection,
 .change_language {
-    display: -webkit-box;
     display: flex;
     border: 0px;
-    -webkit-box-align: center;
-    align-items: center;
     flex-wrap: nowrap;
     cursor: pointer;
     text-transform: uppercase;
     -webkit-transition: .3s;
     transition: .3s;
-    font-size: 13px;
     line-height: 26px;
     letter-spacing: .33px;
     padding: 5px;
@@ -40,12 +31,6 @@
     font-weight: 600;
     font-family: Tinos;
     margin: 0 15px;
-}
-
-#record-language-selection option {
-    padding-top: 15px;
-    width: 100px;
-    height: 100px;
 }
 
 #record-language-selection:hover {
