@@ -148,6 +148,10 @@ $(document).ready(function() {
             });
         }
     }
+
+    if (typeof preSelect == 'function') {
+        preSelect();
+    }
 });
 
 if (!document.getElementById('t-phonemask-script')) {

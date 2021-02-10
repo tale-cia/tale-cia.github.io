@@ -1,7 +1,3 @@
-$(document).ready(function() {
-    preSelect();
-});
-
 function changeLang() {
     let selectLang = document.getElementById("record-language-selection");
     let lang = selectLang.options[selectLang.selectedIndex].value;
