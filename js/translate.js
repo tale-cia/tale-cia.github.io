@@ -242,5 +242,8 @@ function setTextContent() {
                 lastSliderContent.forEach(el => el.innerHTML = subTabSystems.subVersions.slide2.content3);
             }
         }
+        if (document.querySelector("#product-description-glazed-windows")) {
+            document.getElementById("product-description-glazed-windows").innerHTML = dataPage.descrGlazedWindows;
+        }
     } else { setTimeout(changeLang, 50); }
 }
