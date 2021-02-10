@@ -245,5 +245,49 @@ function setTextContent() {
         if (document.querySelector("#product-description-glazed-windows")) {
             document.getElementById("product-description-glazed-windows").innerHTML = dataPage.descrGlazedWindows;
         }
+        if (document.querySelector("#record-subtab-glazed-windows") && typeof subTabGlazedWindowsData != "undefined") {
+            let subTabGlazedWindows = JSON.parse(subTabGlazedWindowsData);
+            document.getElementById("record-subtab-glazed-windows-1").innerHTML = subTabGlazedWindows.subTab1;
+            document.getElementById("record-subtab-glazed-windows-2").innerHTML = subTabGlazedWindows.subTab2;
+            document.getElementById("record-subtab-glazed-windows-3").innerHTML = subTabGlazedWindows.subTab3;
+            if (document.querySelector(".subtab__wrapper_mobile")) {
+                document.getElementById("record-subtab-glazed-windows-mob1").innerHTML = subTabGlazedWindows.subTab1;
+                document.getElementById("record-subtab-glazed-windows-mob2").innerHTML = subTabGlazedWindows.subTab2;
+                document.getElementById("record-subtab-glazed-windows-mob3").innerHTML = subTabGlazedWindows.subTab3;
+            }
+            if (document.querySelector("#record-standart")) {
+                document.getElementById("meta-record-sld1_1").setAttribute("content", subTabGlazedWindows.subVersions.slide1.title1);
+                document.getElementById("record-title-sld1_1").innerHTML = subTabGlazedWindows.subVersions.slide1.title1;
+                document.getElementById("record-content-sld1_1").innerHTML = subTabGlazedWindows.subVersions.slide1.content1;
+                let lastSliderMeta = document.querySelectorAll(".meta-record-sld1_2");
+                lastSliderMeta.forEach(el => el.setAttribute("content", subTabGlazedWindows.subVersions.slide1.title2));
+                let lastSliderTitles = document.querySelectorAll(".record-title-sld1_2");
+                lastSliderTitles.forEach(el => el.innerHTML = subTabGlazedWindows.subVersions.slide1.title2);
+                let lastSliderContent = document.querySelectorAll(".record-content-sld1_2")
+                lastSliderContent.forEach(el => el.innerHTML = subTabGlazedWindows.subVersions.slide1.content2);
+            }
+            if (document.querySelector("#record-not-standart")) {
+                document.getElementById("meta-record-sld2_1").setAttribute("content", subTabGlazedWindows.subVersions.slide2.title1);
+                document.getElementById("record-title-sld2_1").innerHTML = subTabGlazedWindows.subVersions.slide2.title1;
+                document.getElementById("record-content-sld2_1").innerHTML = subTabGlazedWindows.subVersions.slide2.content2; // because same as 2_2
+                document.getElementById("meta-record-sld2_2").setAttribute("content", subTabGlazedWindows.subVersions.slide2.title2);
+                document.getElementById("record-title-sld2_2").innerHTML = subTabGlazedWindows.subVersions.slide2.title2;
+                document.getElementById("record-content-sld2_2").innerHTML = subTabGlazedWindows.subVersions.slide2.content2;
+                let lastSliderMeta = document.querySelectorAll(".meta-record-sld2_3");
+                lastSliderMeta.forEach(el => el.setAttribute("content", subTabGlazedWindows.subVersions.slide2.title3));
+                let lastSliderTitles = document.querySelectorAll(".record-title-sld2_3");
+                lastSliderTitles.forEach(el => el.innerHTML = subTabGlazedWindows.subVersions.slide2.title3);
+                let lastSliderContent = document.querySelectorAll(".record-content-sld2_3")
+                lastSliderContent.forEach(el => el.innerHTML = subTabGlazedWindows.subVersions.slide2.content3);
+            }
+            if (document.querySelector("#record-decorative")) {
+                let lastSliderMeta = document.querySelectorAll(".meta-record-sld3_1");
+                lastSliderMeta.forEach(el => el.setAttribute("content", subTabGlazedWindows.subVersions.slide3.title1));
+                let lastSliderTitles = document.querySelectorAll(".record-title-sld3_1");
+                lastSliderTitles.forEach(el => el.innerHTML = subTabGlazedWindows.subVersions.slide3.title1);
+                let lastSliderContent = document.querySelectorAll(".record-content-sld3_1")
+                lastSliderContent.forEach(el => el.innerHTML = subTabGlazedWindows.subVersions.slide3.content1);
+            }
+        }
     } else { setTimeout(changeLang, 50); }
 }
