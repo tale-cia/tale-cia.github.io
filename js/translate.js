@@ -68,6 +68,7 @@ function setTextContent() {
         if (document.querySelector("#t-footer")) {
             document.getElementById("record-all-rights-reserved").innerHTML = dataPage.footer.rightsReserved;
             document.getElementById("record-footer-header").innerHTML = dataPage.footer.header;
+            document.getElementById("record-footer-partners").innerHTML = dataPage.footer.partners;
             document.getElementById("record-footer-mainpage").innerHTML = dataPage.footer.mainPage;
             document.getElementById("record-footer-about-company").innerHTML = dataPage.footer.aboutCompany;
             document.getElementById("record-footer-contacts").innerHTML = dataPage.footer.contacts;
