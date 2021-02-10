@@ -1,7 +1,6 @@
 function changeLang() {
     let selectLang = document.getElementById("record-language-selection");
     let lang = selectLang.options[selectLang.selectedIndex].value;
-    console.log("choose ", lang);
     let previousLang = document.getElementById("scriptLang" + sessionStorage.getItem('lang')); // session && if == current
     if (previousLang) {
         previousLang.parentNode.removeChild(previousLang);
@@ -18,7 +17,6 @@ function changeLang() {
 
 function preSelect() {
     let selectLang;
-    console.log("preselect ");
     if (selectLang = document.getElementById("record-language-selection")) {
         selectLang.value = (!sessionStorage.getItem('lang')) ? "Uk" : sessionStorage.getItem('lang');
     }
@@ -26,7 +24,6 @@ function preSelect() {
 }
 
 function setTextContent() {
-    console.log((data) ? true : false);
     document.querySelector("html").setAttribute("lang", (!sessionStorage.getItem('lang')) ? "uk" : sessionStorage.getItem('lang').toLowerCase());
     if (typeof data != "undefined") {
         let dataPage = JSON.parse(data);
@@ -243,6 +240,6 @@ function setTextContent() {
                 let lastSliderContent = document.querySelectorAll(".record-content-sld2_3")
                 lastSliderContent.forEach(el => el.innerHTML = subTabSystems.subVersions.slide2.content3);
             }
-        }
+        } else { setTimeout(changeLang, 50); }
     }
 }
