@@ -1,5 +1,6 @@
 function changeLang() {
     let selectLang = document.getElementById("record-language-selection");
+    console.log("take", selectLang.options[selectLang.selectedIndex].value);
     let lang = selectLang.options[selectLang.selectedIndex].value;
     let previousLang = document.getElementById("scriptLang" + sessionStorage.getItem('lang')); // session && if == current
     if (previousLang) {
@@ -25,7 +26,9 @@ function preSelect() {
 
 function setTextContent() {
     document.querySelector("html").setAttribute("lang", (!sessionStorage.getItem('lang')) ? "uk" : sessionStorage.getItem('lang').toLowerCase());
+    console.log("here we go again");
     if (typeof data != "undefined") {
+        console.log("fine");
         let dataPage = JSON.parse(data);
         if (document.querySelector("#record-navheader-list")) {
             document.getElementById("record-header-main").innerHTML = dataPage.headerMenu.main;
@@ -240,6 +243,7 @@ function setTextContent() {
                 let lastSliderContent = document.querySelectorAll(".record-content-sld2_3")
                 lastSliderContent.forEach(el => el.innerHTML = subTabSystems.subVersions.slide2.content3);
             }
-        } else { setTimeout(changeLang, 50); }
+        } else { console.log("try again");
+            setTimeout(changeLang, 50); }
     }
 }
