@@ -1,6 +1,7 @@
 function changeLang() {
     let selectLang = document.getElementById("record-language-selection");
     let lang = selectLang.options[selectLang.selectedIndex].value;
+    console.log("choose ", lang);
     let previousLang = document.getElementById("scriptLang" + sessionStorage.getItem('lang')); // session && if == current
     if (previousLang) {
         previousLang.parentNode.removeChild(previousLang);
@@ -20,12 +21,12 @@ function preSelect() {
     console.log("preselect ");
     if (selectLang = document.getElementById("record-language-selection")) {
         selectLang.value = (!sessionStorage.getItem('lang')) ? "Uk" : sessionStorage.getItem('lang');
-        console.log("lang is ", selectLang.value);
     }
     setTimeout(changeLang, 50);
 }
 
 function setTextContent() {
+    console.log(data);
     document.querySelector("html").setAttribute("lang", (!sessionStorage.getItem('lang')) ? "uk" : sessionStorage.getItem('lang').toLowerCase());
     if (typeof data != "undefined") {
         let dataPage = JSON.parse(data);
