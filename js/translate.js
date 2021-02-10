@@ -290,5 +290,25 @@ function setTextContent() {
                 lastSliderContent.forEach(el => el.innerHTML = subTabGlazedWindows.subVersions.slide3.content1);
             }
         }
+        if (document.querySelector("#choose-style-equipment")) {
+            document.getElementById("choose-style-equipment").innerHTML = dataPage.chooseStyleEquipment;
+        }
+        if (document.querySelector("#record-subtab-equipment") && typeof subTabEquipmentData != "undefined") {
+            let subTabEquipment = JSON.parse(subTabEquipmentData);
+            document.getElementById("record-subtab-equipment-1").innerHTML = subTabEquipment.subTab1;
+            document.getElementById("record-subtab-equipment-2").innerHTML = subTabEquipment.subTab2;
+            document.getElementById("record-subtab-equipment-3").innerHTML = subTabEquipment.subTab3;
+            document.getElementById("record-subtab-equipment-4").innerHTML = subTabEquipment.subTab4;
+            document.getElementById("record-subtab-equipment-5").innerHTML = subTabEquipment.subTab5;
+            document.getElementById("record-subtab-equipment-6").innerHTML = subTabEquipment.subTab6;
+            if (document.querySelector(".subtab__wrapper_mobile")) {
+                document.getElementById("record-subtab-equipment-mob1").innerHTML = subTabEquipment.subTab1;
+                document.getElementById("record-subtab-equipment-mob2").innerHTML = subTabEquipment.subTab2;
+                document.getElementById("record-subtab-equipment-mob3").innerHTML = subTabEquipment.subTab3;
+                document.getElementById("record-subtab-equipment-mob4").innerHTML = subTabEquipment.subTab4;
+                document.getElementById("record-subtab-equipment-mob5").innerHTML = subTabEquipment.subTab5;
+                document.getElementById("record-subtab-equipment-mob6").innerHTML = subTabEquipment.subTab6;
+            }
+        }
     } else { setTimeout(changeLang, 50); }
 }
