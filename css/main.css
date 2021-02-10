@@ -35,6 +35,7 @@
     padding: 5px;
     outline: none;
     color: #505e6d;
+    background-color: transparent;
     font-size: 14px;
     font-weight: 600;
     font-family: Tinos;
@@ -297,6 +298,70 @@
 #record-our-production .our-production__wrapper .our-production__btn {
     font-size: 12px;
     text-transform: uppercase;
+}
+
+.subtab__tab {
+    border: 0px solid #222;
+    background-color: #ebf2f3 !important;
+}
+
+.subtab__tab_active {
+    background-color: #d0df56 !important;
+    border-color: #222 !important;
+}
+
+.subtab__tab_active:after {
+    width: 0px;
+    top: -0px;
+    right: -0px;
+    bottom: -0px;
+    background-color: #222 !important;
+}
+
+.subtab__tab_active .subtab__title {
+    color: #ffffff !important;
+    font-weight: 600 !important;
+}
+
+.subtab__tab .subtab__title {
+    margin-left: 0px;
+}
+
+.subtab__tab:last-child .subtab__title {
+    margin-left: 0;
+}
+
+.subtab__tab:last-child {
+    border-right: 0px solid #222 !important;
+}
+
+.subtab__tab_active:last-child {
+    border-right: 0px solid #222 !important;
+}
+
+.subtab__select {
+    border: 0px solid #222;
+    color: #ffffff !important;
+    background-color: #d0df56 !important;
+}
+
+.subtab__wrapper_mobile:after {
+    border-color: #ffffff transparent transparent transparent;
+}
+
+.subtab__firefoxfix {
+    top: 0px;
+    bottom: 0px;
+    right: 0px;
+    background-color: #d0df56 !important;
+}
+
+.t-slds__bullet:hover .t-slds__bullet_body {
+    background-color: #222 !important;
+}
+
+.t-slds__bullet_active .t-slds__bullet_body {
+    background-color: #222 !important;
 }
 
 #record-footer-content .footer-block__descr .logos:nth-child(2) {

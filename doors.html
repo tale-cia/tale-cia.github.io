@@ -39,111 +39,7 @@
     <script src="js/tilda-forms-1.0.min.js" charset="utf-8"></script>
     <script src="js/tilda-zoom-2.0.min.js" charset="utf-8"></script>
     <script src="js/main.js" charset="utf-8"></script>
-    <script type="text/javascript">
-        $(document).ready(function() {
-            subTab_init('subtab-doors');
-
-            t_sldsInit('single-leaf');
-            $('.slider-block').bind('displayChanged', function() {
-                t_slds_updateSlider('single-leaf');
-                t_slds_positionArrows('single-leaf');
-            });
-
-            t_sldsInit('bivalve-shtulp');
-            $('.slider-block').bind('displayChanged', function() {
-                t_slds_updateSlider('bivalve-shtulp');
-                t_slds_positionArrows('bivalve-shtulp');
-            });
-
-            t_sldsInit('sliding-systems');
-            $('.slider-block').bind('displayChanged', function() {
-                t_slds_updateSlider('sliding-systems');
-                t_slds_positionArrows('sliding-systems');
-            });
-        });
-    </script>
     <script src="js/translate.js" charset="utf-8"></script>
-    <style type="text/css">
-        #record-subtab-doors .subtab__tab {
-            border: 0px solid #222;
-            background-color: #ebf2f3 !important;
-        }
-        
-        #record-subtab-doors .subtab__tab_active {
-            background-color: #d0df56 !important;
-            border-color: #222 !important;
-        }
-        
-        #record-subtab-doors .subtab__tab_active:after {
-            width: 0px;
-            top: -0px;
-            right: -0px;
-            bottom: -0px;
-            background-color: #222 !important;
-        }
-        
-        #record-subtab-doors .subtab__tab_active .subtab__title {
-            color: #ffffff !important;
-            font-weight: 600 !important;
-        }
-        
-        #record-subtab-doors .subtab__tab .subtab__title {
-            margin-left: 0px;
-        }
-        
-        #record-subtab-doors .subtab__tab:last-child .subtab__title {
-            margin-left: 0;
-        }
-        
-        #record-subtab-doors .subtab__tab:last-child {
-            border-right: 0px solid #222 !important;
-        }
-        
-        #record-subtab-doors .subtab__tab_active:last-child {
-            border-right: 0px solid #222 !important;
-        }
-        
-        #record-subtab-doors .subtab__select {
-            border: 0px solid #222;
-            color: #ffffff !important;
-            background-color: #d0df56 !important;
-        }
-        
-        #record-subtab-doors .subtab__wrapper_mobile:after {
-            border-color: #ffffff transparent transparent transparent;
-        }
-        
-        #record-subtab-doors .subtab__firefoxfix {
-            top: 0px;
-            bottom: 0px;
-            right: 0px;
-            background-color: #d0df56 !important;
-        }
-        
-        #record-single-leaf .t-slds__bullet_active .t-slds__bullet_body {
-            background-color: #222 !important;
-        }
-        
-        #record-single-leaf .t-slds__bullet:hover .t-slds__bullet_body {
-            background-color: #222 !important;
-        }
-        
-        #record-bivalve-shtulp .t-slds__bullet_active .t-slds__bullet_body {
-            background-color: #222 !important;
-        }
-        
-        #record-bivalve-shtulp .t-slds__bullet:hover .t-slds__bullet_body {
-            background-color: #222 !important;
-        }
-        
-        #record-sliding-systems .t-slds__bullet_active .t-slds__bullet_body {
-            background-color: #222 !important;
-        }
-        
-        #record-sliding-systems .t-slds__bullet:hover .t-slds__bullet_body {
-            background-color: #222 !important;
-        }
-    </style>
 </head>
 
 <body class="t-body" style="margin:0;">
@@ -331,32 +227,26 @@
                         <div class="subtab__wrapper t-align_center">
                             <div class="subtab__tab subtab__tab_active subtab__width_25" data-tab-rec-ids="single-leaf">
                                 <div class="subtab__title t-name t-name_xs" style="color:#000000;font-size:14px;font-weight:400;padding-top:14px;padding-bottom:14px;" field="title">
-                                    <div style="color:#3f3636;" data-customstyle="yes">Одностворчатые</div>
+                                    <div id="record-subtab-doors-1" style="color:#3f3636;" data-customstyle="yes"></div>
                                 </div>
                             </div>
                             <div class="subtab__tab subtab__width_25" data-tab-rec-ids="bivalve-shtulp">
                                 <div class="subtab__title t-name t-name_xs" style="color:#000000;font-size:14px;font-weight:400;padding-top:14px;padding-bottom:14px;" field="title2">
-                                    <div style="color:#3f3636;" data-customstyle="yes">Двустворчатые-штульп</div>
+                                    <div id="record-subtab-doors-2" style="color:#3f3636;" data-customstyle="yes"></div>
                                 </div>
                             </div>
                             <div class="subtab__tab subtab__width_25" data-tab-rec-ids="sliding-systems">
                                 <div class="subtab__title t-name t-name_xs" style="color:#000000;font-size:14px;font-weight:400;padding-top:14px;padding-bottom:14px;" field="title3">
-                                    <div style="color:#3f3636;" data-customstyle="yes">Раздвижные системы</div>
+                                    <div id="record-subtab-doors-3" style="color:#3f3636;" data-customstyle="yes"></div>
                                 </div>
                             </div>
                         </div>
                         <div class="subtab__wrapper_mobile">
                             <div class="subtab__firefoxfix"></div>
                             <select class="subtab__select t-name" style="font-family:'Merriweather';">
-                                <option value="single-leaf">
-                                    <div style="color:#3f3636;" data-customstyle="yes">Одностворчатые</div>
-                                </option>
-                                <option value="bivalve-shtulp">
-                                    <div style="color:#3f3636;" data-customstyle="yes">Двустворчатые-штульп</div>
-                                </option>
-                                <option value="sliding-systems">
-                                    <div style="color:#3f3636;" data-customstyle="yes">Раздвижные системы</div>
-                                </option>
+                                <option id="record-subtab-doors-mob1" value="single-leaf" style="color:#3f3636;" data-customstyle="yes"></option>
+                                <option id="record-subtab-doors-mob2" value="bivalve-shtulp"style="color:#3f3636;" data-customstyle="yes"></option>
+                                <option id="record-subtab-doors-mob3" value="sliding-systems"style="color:#3f3636;" data-customstyle="yes"></option>
                             </select>
                         </div>
                     </div>
@@ -373,19 +263,15 @@
                                     <div class="t-container">
                                         <div class="t-col t-col_6 slider-block__centeredsection" itemscope itemtype="http://schema.org/ImageObject">
                                             <meta itemprop="image" content="images/tild6430-3137-4439-b762-366234653131___1.png">
-                                            <meta itemprop="caption" content="Балконные двери">
+                                            <meta id="meta-record-sld1_1" itemprop="caption" content="">
                                             <div class="slider-block__imgwrapper" bgimgfield="gi_img__2">
                                                 <div class="t-slds__bgimg t-bgimg" data-original="images/tild6430-3137-4439-b762-366234653131___1.png" style="background-image: url('images/tild6430-3137-4439-b762-366234653131__-__resizeb__20x___1.png');"></div>
                                                 <div class="slider-block__separator" style="padding-bottom:80.357142857143%;"></div>
                                             </div>
                                         </div>
                                         <div class="t-col t-col_6 ">
-                                            <div class="slider-block__title t-title t-title_xxs" field="li_title__1513702680681">Балконные двери</div>
-                                            <div class="t-text t-text_md" field="li_text__1513702680681">
-                                                <strong>Балконные двери</strong> устанавливаются блоком вместе с одним/двумя окнами, а также могут быть и отдельной конструкцией. Такие пластиковые двери отделяют помещение комнаты от лоджии или балкона.
-                                                Балконная дверь может быть <strong>цельностеклянной</strong>, так и
-                                                <br /> для удобства нижнюю половину двери перекрывают пластиковой сэндвич-панелью с импостом на уровне подоконника. Для такой двери используют поворотный или поворотно-откидной механизм, позволяющий устанавливать
-                                                полотно в режиме проветривания. Это самая доступная по цене и популярная модель. <br /></div>
+                                            <div id="record-title-sld1_1" class="slider-block__title t-title t-title_xxs"></div>
+                                            <div id="record-content-sld1_1" class="t-text t-text_md"></div>
                                         </div>
                                     </div>
                                 </div>
@@ -393,26 +279,21 @@
                                     <div class="t-container">
                                         <div class="t-col t-col_6 slider-block__centeredsection" itemscope itemtype="http://schema.org/ImageObject">
                                             <meta itemprop="image" content="images/tild3666-3766-4462-b138-303638326337___.jpg">
-                                            <meta itemprop="caption" content="Входные двери">
+                                            <meta class="meta-record-sld1_2" itemprop="caption" content="">
                                             <div class="slider-block__imgwrapper" bgimgfield="gi_img__2">
                                                 <div class="t-slds__bgimg t-bgimg" data-original="images/tild3666-3766-4462-b138-303638326337___.jpg" style="background-image: url('images/tild3666-3766-4462-b138-303638326337__-__resizeb__20x___.jpg');"></div>
                                                 <div class="slider-block__separator" style="padding-bottom:80.357142857143%;"></div>
                                             </div>
                                         </div>
                                         <div class="t-col t-col_6 ">
-                                            <div class="slider-block__title t-title t-title_xxs" field="li_title__1513702688742">Входные двери</div>
-                                            <div class="t-text t-text_md" field="li_text__1513702688742">
-                                                <strong>Входные двери из ПВХ</strong> используются при входе в здание и в помещениях с повышенной проходимостью, где предполагается частое открывание и закрывание створок, а разнообразие вариантов исполнения
-                                                удовлетворят любую, даже самую смелую фантазию. На входные двери из ПВХ устанавливаются однозапорные и многозапорные замки, в зависимости от типа фиксатора <br /> замка, двери комплектуются офисными ручками
-                                                из алюминиевой трубы или нажимными гарнитурами, устанавливаются дверные петли с высоким ресурсом работы. Для плавного и плотного закрывания дверной створки часто используются доводчики. Это конструкции,
-                                                которые не нуждаются в особом уходе: на протяжении долгого времени они сохраняют свою привлекательность за счет высокой износостойкости, что сделало их таким популярным на <br /> сегодняшний день товаром.
-                                                <br /></div>
+                                            <div class="record-title-sld1_2 slider-block__title t-title t-title_xxs"></div>
+                                            <div class="record-content-sld1_2 t-text t-text_md"></div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="t-slds__arrow_container ">
+                        <div class="t-slds__arrow_container">
                             <div class="t-slds__arrow_wrapper t-slds__arrow_wrapper-left" data-slide-direction="left">
                                 <div class="t-slds__arrow t-slds__arrow-left t-slds__arrow-withbg" style="width: 50px; height: 50px;background-color: rgba(232,232,232,1);">
                                     <div class="t-slds__arrow_body t-slds__arrow_body-left" style="width: 11px;">
@@ -460,25 +341,22 @@
                                     <div class="t-container">
                                         <div class="t-col t-col_6 slider-block__centeredsection" itemscope itemtype="http://schema.org/ImageObject">
                                             <meta itemprop="image" content="images/tild3934-3065-4631-b535-656534323632___.jpg">
-                                            <meta itemprop="caption" content="Двустворчатые-штульп">
+                                            <meta class="meta-record-sld2_1" itemprop="caption" content="">
                                             <div class="slider-block__imgwrapper" bgimgfield="gi_img__2">
                                                 <div class="t-slds__bgimg t-bgimg" data-original="images/tild3934-3065-4631-b535-656534323632___.jpg" style="background-image: url('images/tild3934-3065-4631-b535-656534323632__-__resizeb__20x___.jpg');"></div>
                                                 <div class="slider-block__separator" style="padding-bottom:80.357142857143%;"></div>
                                             </div>
                                         </div>
                                         <div class="t-col t-col_6 ">
-                                            <div class="slider-block__title t-title t-title_xxs" field="li_title__1513702680681">Двустворчатые-штульп</div>
-                                            <div class="t-text t-text_md" field="li_text__1513702680681">Если ширина проема двери больше стандартных 900 мм и может составлять 1150, 1400 или 1600 мм, то устанавливают <strong>штульповые двери</strong>. Такие двери делают из двух створок, одна из <br /> которых имеет
-                                                ширину 700-800 мм, вторая устанавливается на оставшуюся ширину проема, закрепляется шпингалетом и остается неподвижной. Такие двери могут открываться внутрь и <br /> наружу. На «активной» двери устанавливается
-                                                ручка. Порядок открывания дверей: сначала открывается главная дверь, затем отщелкиваются шпингалеты и открывается «пассивная» дверь. <br />
-                                            </div>
+                                            <div class="record-title-sld2_1 slider-block__title t-title t-title_xxs"></div>
+                                            <div class="record-content-sld2_1 t-text t-text_md"></div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="t-slds__arrow_container "> </div>
-                        <div class="t-slds__bullet_wrapper"> </div>
+                        <div class="t-slds__arrow_container"></div>
+                        <div class="t-slds__bullet_wrapper"></div>
                     </div>
                 </div>
             </div>
@@ -493,26 +371,22 @@
                                     <div class="t-container">
                                         <div class="t-col t-col_6 slider-block__centeredsection" itemscope itemtype="http://schema.org/ImageObject">
                                             <meta itemprop="image" content="images/tild3236-6336-4338-b530-396330656230__1___.png">
-                                            <meta itemprop="caption" content="Раздвижная дверь с 2-х сторонней ручкой">
+                                            <meta class="meta-record-sld3_1" itemprop="caption" content="">
                                             <div class="slider-block__imgwrapper" bgimgfield="gi_img__2">
                                                 <div class="t-slds__bgimg t-bgimg" data-original="images/tild3236-6336-4338-b530-396330656230__1___.png" style="background-image: url('images/tild3236-6336-4338-b530-396330656230__-__resizeb__20x__1___.png');"></div>
                                                 <div class="slider-block__separator" style="padding-bottom:80.357142857143%;"></div>
                                             </div>
                                         </div>
                                         <div class="t-col t-col_6 ">
-                                            <div class="slider-block__title t-title t-title_xxs" field="li_title__1513702680681">Раздвижная дверь с 2-х сторонней ручкой</div>
-                                            <div class="t-text t-text_md" field="li_text__1513702680681">
-                                                <strong>Металлопластиковые раздвижные</strong> двери обычно называют Портальными – что в переводе с английского означает «врата». Раздвижные двери обеспечивают прекрасный панорамный вид благодаря своим большим
-                                                элементам. Это не только оригинальное дизайнерское решение в современном стиле, но и существенная экономия места. Такие двери не нуждаются в дополнительном пространстве для открывания створок. Раздвижные
-                                                двери —
-                                                <br />это всегда практично и удобно.</div>
+                                            <div class="record-title-sld3_1 slider-block__title t-title t-title_xxs"></div>
+                                            <div class="record-content-sld3_1 t-text t-text_md"></div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="t-slds__arrow_container "> </div>
-                        <div class="t-slds__bullet_wrapper"> </div>
+                        <div class="t-slds__arrow_container"></div>
+                        <div class="t-slds__bullet_wrapper"></div>
                     </div>
                 </div>
             </div>

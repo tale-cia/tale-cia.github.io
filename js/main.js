@@ -38,15 +38,107 @@ $(document).ready(function() {
     navTab_changebgopacitymenu('header-block');
     navTab_createMobileMenu('header-block');
 
-    setTimeout(function() {
-        t_menusub_init('header-block');
-    }, 500);
+    setTimeout(function() { t_menusub_init('header-block'); }, 500);
 
     $('#record-header-block .navtab__list .navtab__list_item').each(function(e) {
         if ($(this).find('.t-menu__link-item').hasClass('t-active')) {
             $(this).css('background', '#EBF2F3');
         }
     })
+
+    setTimeout(function() { contactUs_initPopup('contact-us-block'); }, 500); /* hack for Android */
+
+    var uag = navigator.userAgent.toLowerCase();
+    var isAndroid = uag.indexOf("android") > -1;
+    if (isAndroid) {
+        $('.t-body').addClass('t-body_scrollable-hack-for-android');
+        $('head').append("<style>@media screen and (max-width: 560px) {\n.t-body_scrollable-hack-for-android {\noverflow: visible !important;\n}\n}\n</style>");
+    }
+
+    if (document.getElementById("record-our-production")) { ourProduction_init('our-production'); }
+
+    if (document.getElementById("record-subtab-windows")) {
+        subTab_init('subtab-windows');
+        if (document.getElementById("record-subtab-windows")) {
+            t_sldsInit('standart-w');
+            t_sldsInit('not-standart-w');
+            t_sldsInit('sliding-system-w');
+            t_sldsInit('designer-w');
+
+            $('.slider-block').bind('displayChanged', function() {
+                t_slds_updateSlider('standart-w');
+                t_slds_positionArrows('standart-w');
+                t_slds_updateSlider('not-standart-w');
+                t_slds_positionArrows('not-standart-w');
+                t_slds_updateSlider('sliding-system-w');
+                t_slds_positionArrows('sliding-system-w');
+                t_slds_updateSlider('designer-w');
+                t_slds_positionArrows('designer-w');
+            });
+        }
+        if (document.getElementById("record-subtab-doors")) {
+            t_sldsInit('single-leaf');
+            t_sldsInit('bivalve-shtulp');
+            t_sldsInit('sliding-systems');
+
+            $('.slider-block').bind('displayChanged', function() {
+                t_slds_updateSlider('single-leaf');
+                t_slds_positionArrows('single-leaf');
+                t_slds_updateSlider('bivalve-shtulp');
+                t_slds_positionArrows('bivalve-shtulp');
+                t_slds_updateSlider('sliding-systems');
+                t_slds_positionArrows('sliding-systems');
+            });
+        }
+        if (document.getElementById("record-subtab-equipment")) {
+            t_sldsInit('protective-shutters');
+            t_sldsInit('roller-shutters');
+            t_sldsInit('jalousie');
+            t_sldsInit('mosquito-net');
+            t_sldsInit('shpros');
+            t_sldsInit('sills');
+
+            $('.slider-block').bind('displayChanged', function() {
+                t_slds_updateSlider('protective-shutters');
+                t_slds_positionArrows('protective-shutters');
+                t_slds_updateSlider('roller-shutters');
+                t_slds_positionArrows('roller-shutters');
+                t_slds_updateSlider('jalousie');
+                t_slds_positionArrows('jalousie');
+                t_slds_updateSlider('mosquito-net');
+                t_slds_positionArrows('mosquito-net');
+                t_slds_updateSlider('shpros');
+                t_slds_positionArrows('shpros');
+                t_slds_updateSlider('sills');
+                t_slds_positionArrows('sills');
+            });
+        }
+        if (document.getElementById("record-subtab-systems")) {
+            t_sldsInit('profile-wds');
+            t_sldsInit('profile-internova');
+
+            $('.slider-block').bind('displayChanged', function() {
+                t_slds_updateSlider('profile-wds');
+                t_slds_positionArrows('profile-wds');
+                t_slds_updateSlider('profile-internova');
+                t_slds_positionArrows('profile-internova');
+            });
+        }
+        if (document.getElementById("record-subtab-glazed-windows")) {
+            t_sldsInit('standart');
+            t_sldsInit('not-standart');
+            t_sldsInit('decorative');
+
+            $('.slider-block').bind('displayChanged', function() {
+                t_slds_updateSlider('standart');
+                t_slds_positionArrows('standart');
+                t_slds_updateSlider('not-standart');
+                t_slds_positionArrows('not-standart');
+                t_slds_updateSlider('decorative');
+                t_slds_positionArrows('decorative');
+            });
+        }
+    }
 });
 
 if (!document.getElementById('t-phonemask-script')) {
@@ -73,16 +165,3 @@ if (!document.getElementById('t-phonemask-script')) {
         }
     });
 }
-
-$(document).ready(function() {
-    setTimeout(function() {
-        contactUs_initPopup('contact-us-block');
-    }, 500); /* hack for Android */
-    var ua = navigator.userAgent.toLowerCase();
-    var isAndroid = ua.indexOf("android") > -1;
-    if (isAndroid) {
-        $('.t-body').addClass('t-body_scrollable-hack-for-android');
-        $('head').append("<style>@media screen and (max-width: 560px) {\n.t-body_scrollable-hack-for-android {\noverflow: visible !important;\n}\n}\n</style>");
-        console.log('Android css hack was inited');
-    }
-});

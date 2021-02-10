@@ -116,7 +116,8 @@ function setTextContent() {
                 document.getElementById("meta-record-sld1_2").setAttribute("content", dataPage.subTabWindows.subVersions.slide1.title2);
                 document.getElementById("record-title-sld1_2").innerHTML = dataPage.subTabWindows.subVersions.slide1.title2;
                 document.getElementById("record-content-sld1_2").innerHTML = dataPage.subTabWindows.subVersions.slide1.content2;
-                document.getElementById("meta-record-sld1_3").setAttribute("content", dataPage.subTabWindows.subVersions.slide1.title3);
+                let lastSliderMeta = document.querySelectorAll(".meta-record-sld1_3");
+                lastSliderMeta.forEach(el => el.setAttribute("content", dataPage.subTabWindows.subVersions.slide1.title3));
                 let lastSliderTitles = document.querySelectorAll(".record-title-sld1_3");
                 lastSliderTitles.forEach(el => el.innerHTML = dataPage.subTabWindows.subVersions.slide1.title3);
                 let lastSliderContent = document.querySelectorAll(".record-content-sld1_3")
@@ -140,7 +141,8 @@ function setTextContent() {
                 document.getElementById("meta-record-sld3_1").setAttribute("content", dataPage.subTabWindows.subVersions.slide3.title1);
                 document.getElementById("record-title-sld3_1").innerHTML = dataPage.subTabWindows.subVersions.slide3.title1;
                 document.getElementById("record-content-sld3_1").innerHTML = dataPage.subTabWindows.subVersions.slide3.content1;
-                document.getElementById("meta-record-sld3_2").setAttribute("content", dataPage.subTabWindows.subVersions.slide3.title2);
+                let lastSliderMeta = document.querySelectorAll(".meta-record-sld3_2");
+                lastSliderMeta.forEach(el => el.setAttribute("content", dataPage.subTabWindows.subVersions.slide3.title2));
                 let lastSliderTitles = document.querySelectorAll(".record-title-sld3_2");
                 lastSliderTitles.forEach(el => el.innerHTML = dataPage.subTabWindows.subVersions.slide3.title2);
                 let lastSliderContent = document.querySelectorAll(".record-content-sld3_2")
@@ -162,6 +164,43 @@ function setTextContent() {
                 lastSliderTitles.forEach(el => el.innerHTML = dataPage.subTabWindows.subVersions.slide4.title4);
                 let lastSliderContent = document.querySelectorAll(".record-content-sld4_4")
                 lastSliderContent.forEach(el => el.innerHTML = dataPage.subTabWindows.subVersions.slide4.content4);
+            }
+        }
+        if (document.querySelector("#record-subtab-doors")) {
+            document.getElementById("record-subtab-doors-1").innerHTML = dataPage.subTabDoors.subTab1;
+            document.getElementById("record-subtab-doors-2").innerHTML = dataPage.subTabDoors.subTab2;
+            document.getElementById("record-subtab-doors-3").innerHTML = dataPage.subTabDoors.subTab3;
+            if (document.querySelector(".subtab__wrapper_mobile")) {
+                document.getElementById("record-subtab-doors-mob1").innerHTML = dataPage.subTabDoors.subTab1;
+                document.getElementById("record-subtab-doors-mob2").innerHTML = dataPage.subTabDoors.subTab2;
+                document.getElementById("record-subtab-doors-mob3").innerHTML = dataPage.subTabDoors.subTab3;
+            }
+            if (document.querySelector("#record-single-leaf")) {
+                document.getElementById("meta-record-sld1_1").setAttribute("content", dataPage.subTabDoors.subVersions.slide1.title1);
+                document.getElementById("record-title-sld1_1").innerHTML = dataPage.subTabDoors.subVersions.slide1.title1;
+                document.getElementById("record-content-sld1_1").innerHTML = dataPage.subTabDoors.subVersions.slide1.content1;
+                let lastSliderMeta = document.querySelectorAll(".meta-record-sld1_2");
+                lastSliderMeta.forEach(el => el.setAttribute("content", dataPage.subTabDoors.subVersions.slide1.title2));
+                let lastSliderTitles = document.querySelectorAll(".record-title-sld1_2");
+                lastSliderTitles.forEach(el => el.innerHTML = dataPage.subTabDoors.subVersions.slide1.title2);
+                let lastSliderContent = document.querySelectorAll(".record-content-sld1_2")
+                lastSliderContent.forEach(el => el.innerHTML = dataPage.subTabDoors.subVersions.slide1.content2);
+            }
+            if (document.querySelector("#record-bivalve-shtulp")) {
+                let lastSliderMeta = document.querySelectorAll(".meta-record-sld2_1");
+                lastSliderMeta.forEach(el => el.setAttribute("content", dataPage.subTabDoors.subVersions.slide2.title1));
+                let lastSliderTitles = document.querySelectorAll(".record-title-sld2_1");
+                lastSliderTitles.forEach(el => el.innerHTML = dataPage.subTabDoors.subVersions.slide2.title1);
+                let lastSliderContent = document.querySelectorAll(".record-content-sld2_1")
+                lastSliderContent.forEach(el => el.innerHTML = dataPage.subTabDoors.subVersions.slide2.content1);
+            }
+            if (document.querySelector("#record-sliding-systems")) {
+                let lastSliderMeta = document.querySelectorAll(".meta-record-sld3_1");
+                lastSliderMeta.forEach(el => el.setAttribute("content", dataPage.subTabDoors.subVersions.slide3.title1));
+                let lastSliderTitles = document.querySelectorAll(".record-title-sld3_1");
+                lastSliderTitles.forEach(el => el.innerHTML = dataPage.subTabDoors.subVersions.slide3.title1);
+                let lastSliderContent = document.querySelectorAll(".record-content-sld3_1")
+                lastSliderContent.forEach(el => el.innerHTML = dataPage.subTabDoors.subVersions.slide3.content1);
             }
         }
     }
