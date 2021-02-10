@@ -12,13 +12,14 @@ function changeLang() {
     fileRef.setAttribute("src", 'js/lang' + lang + '.json');
     fileRef.setAttribute("id", "scriptLang" + lang)
     document.getElementsByTagName("head")[0].appendChild(fileRef);
-    setTimeout(setTextContent, 50); // looks like it needs time to load the file, that's why we give this time
+    setTimeout(setTextContent, 100); // looks like it needs time to load the file, that's why we give this time
 }
 
 function preSelect() {
     let selectLang;
     if (selectLang = document.getElementById("record-language-selection")) {
         selectLang.value = (!sessionStorage.getItem('lang')) ? "Uk" : sessionStorage.getItem('lang');
+        selectLang.addEventListener("click", changeLang);
     }
     setTimeout(changeLang, 50);
 }
