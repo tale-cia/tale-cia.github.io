@@ -309,6 +309,83 @@ function setTextContent() {
                 document.getElementById("record-subtab-equipment-mob5").innerHTML = subTabEquipment.subTab5;
                 document.getElementById("record-subtab-equipment-mob6").innerHTML = subTabEquipment.subTab6;
             }
+            if (document.querySelector("#record-protective-shutters")) {
+                let lastSliderMeta = document.querySelectorAll(".meta-record-sld1_1");
+                lastSliderMeta.forEach(el => el.setAttribute("content", subTabEquipment.subVersions.slide1.title1));
+                let lastSliderTitles = document.querySelectorAll(".record-title-sld1_1");
+                lastSliderTitles.forEach(el => el.innerHTML = subTabEquipment.subVersions.slide1.title1);
+                let lastSliderContent = document.querySelectorAll(".record-content-sld1_1")
+                lastSliderContent.forEach(el => el.innerHTML = subTabEquipment.subVersions.slide1.content1);
+            }
+            if (document.querySelector("#record-roller-shutters")) {
+                document.getElementById("meta-record-sld2_1").setAttribute("content", subTabEquipment.subVersions.slide2.title1);
+                document.getElementById("record-title-sld2_1").innerHTML = subTabEquipment.subVersions.slide2.title1;
+                document.getElementById("record-content-sld2_1").innerHTML = subTabEquipment.subVersions.slide2.content1;
+                let lastSliderMeta = document.querySelectorAll(".meta-record-sld2_2");
+                lastSliderMeta.forEach(el => el.setAttribute("content", subTabEquipment.subVersions.slide2.title2));
+                let lastSliderTitles = document.querySelectorAll(".record-title-sld2_2");
+                lastSliderTitles.forEach(el => el.innerHTML = subTabEquipment.subVersions.slide2.title2);
+                let lastSliderContent = document.querySelectorAll(".record-content-sld2_2")
+                lastSliderContent.forEach(el => el.innerHTML = subTabEquipment.subVersions.slide2.content2);
+            }
+            if (document.querySelector("#record-jalousie")) {
+                document.getElementById("meta-record-sld3_1").setAttribute("content", subTabEquipment.subVersions.slide3.title1);
+                document.getElementById("record-title-sld3_1").innerHTML = subTabEquipment.subVersions.slide3.title1;
+                document.getElementById("record-content-sld3_1").innerHTML = subTabEquipment.subVersions.slide3.content1;
+                let lastSliderMeta = document.querySelectorAll(".meta-record-sld3_2");
+                lastSliderMeta.forEach(el => el.setAttribute("content", subTabEquipment.subVersions.slide3.title2));
+                let lastSliderTitles = document.querySelectorAll(".record-title-sld3_2");
+                lastSliderTitles.forEach(el => el.innerHTML = subTabEquipment.subVersions.slide3.title2);
+                let lastSliderContent = document.querySelectorAll(".record-content-sld3_2")
+                lastSliderContent.forEach(el => el.innerHTML = subTabEquipment.subVersions.slide3.content2);
+            }
+            if (document.querySelector("#record-mosquito-net")) {
+                document.getElementById("meta-record-sld4_1").setAttribute("content", subTabEquipment.subVersions.slide4.title1);
+                document.getElementById("record-title-sld4_1").innerHTML = subTabEquipment.subVersions.slide4.title1;
+                document.getElementById("record-content-sld4_1").innerHTML = subTabEquipment.subVersions.slide4.content1;
+                document.getElementById("meta-record-sld4_2").setAttribute("content", subTabEquipment.subVersions.slide4.title2);
+                document.getElementById("record-title-sld4_2").innerHTML = subTabEquipment.subVersions.slide4.title2;
+                document.getElementById("record-content-sld4_2").innerHTML = subTabEquipment.subVersions.slide4.content2;
+                let lastSliderMeta = document.querySelectorAll(".meta-record-sld4_3");
+                lastSliderMeta.forEach(el => el.setAttribute("content", subTabEquipment.subVersions.slide4.title3));
+                let lastSliderTitles = document.querySelectorAll(".record-title-sld4_3");
+                lastSliderTitles.forEach(el => el.innerHTML = subTabEquipment.subVersions.slide4.title3);
+                let lastSliderContent = document.querySelectorAll(".record-content-sld4_3")
+                lastSliderContent.forEach(el => el.innerHTML = subTabEquipment.subVersions.slide4.content3);
+            }
+            if (document.querySelector("#record-shpros")) {
+                document.getElementById("meta-record-sld5_1").setAttribute("content", subTabEquipment.subVersions.slide5.title1);
+                document.getElementById("record-title-sld5_1").innerHTML = subTabEquipment.subVersions.slide5.title1;
+                document.getElementById("record-content-sld5_1").innerHTML = subTabEquipment.subVersions.slide5.content1;
+                document.getElementById("meta-record-sld5_2").setAttribute("content", subTabEquipment.subVersions.slide5.title2);
+                document.getElementById("record-title-sld5_2").innerHTML = subTabEquipment.subVersions.slide5.title2;
+                let lastSliderMeta = document.querySelectorAll(".meta-record-sld5_3");
+                lastSliderMeta.forEach(el => el.setAttribute("content", subTabEquipment.subVersions.slide5.title3));
+                let lastSliderTitles = document.querySelectorAll(".record-title-sld5_3");
+                lastSliderTitles.forEach(el => el.innerHTML = subTabEquipment.subVersions.slide5.title3);
+                let lastSliderContent = document.querySelectorAll(".record-content-sld5_3")
+                lastSliderContent.forEach(el => el.innerHTML = subTabEquipment.subVersions.slide5.content3); // 5_2 same as 5_3
+            }
+            if (document.querySelector("#record-sills")) {
+                document.getElementById("meta-record-sld6_1").setAttribute("content", subTabEquipment.subVersions.slide6.title1);
+                document.getElementById("record-title-sld6_1").innerHTML = subTabEquipment.subVersions.slide6.title1;
+                document.getElementById("record-content-sld6_1").innerHTML = subTabEquipment.subVersions.slide6.content1;
+                let dobledSliderMeta = document.querySelectorAll(".meta-record-sld6_2");
+                dobledSliderMeta.forEach(el => el.setAttribute("content", subTabEquipment.subVersions.slide6.title2));
+                let doubledSliderTitles = document.querySelectorAll(".record-title-sld6_2");
+                doubledSliderTitles.forEach(el => el.innerHTML = subTabEquipment.subVersions.slide6.title2);
+                let doubledSliderContent = document.querySelectorAll(".record-content-sld6_2")
+                doubledSliderContent.forEach(el => el.innerHTML = subTabEquipment.subVersions.slide6.content2);
+                document.getElementById("meta-record-sld6_4").setAttribute("content", subTabEquipment.subVersions.slide6.title4);
+                document.getElementById("record-title-sld6_4").innerHTML = subTabEquipment.subVersions.slide6.title4;
+                document.getElementById("record-content-sld6_4").innerHTML = subTabEquipment.subVersions.slide6.content4;
+                let lastSliderMeta = document.querySelectorAll(".meta-record-sld6_5");
+                lastSliderMeta.forEach(el => el.setAttribute("content", subTabEquipment.subVersions.slide6.title5));
+                let lastSliderTitles = document.querySelectorAll(".record-title-sld6_5");
+                lastSliderTitles.forEach(el => el.innerHTML = subTabEquipment.subVersions.slide6.title5);
+                let lastSliderContent = document.querySelectorAll(".record-content-sld6_5")
+                lastSliderContent.forEach(el => el.innerHTML = subTabEquipment.subVersions.slide6.content5);
+            }
         }
     } else { setTimeout(changeLang, 50); }
 }
