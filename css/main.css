@@ -273,7 +273,7 @@
 }
 
 #record-promo-img {
-    height: 36px;
+    height: 31px;
     width: 90px;
 }
 
@@ -379,4 +379,15 @@
 
 .t-slds__arrow {
     background-color: rgba(0, 0, 0, 0.5) !important;
+}
+
+.wrap_footer_logos {
+    display: flex;
+    flex-direction: column;
+}
+
+.wrap_footer_logos-ap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
