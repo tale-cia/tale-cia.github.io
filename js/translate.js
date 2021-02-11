@@ -221,12 +221,18 @@ function setTextContent() {
                 document.getElementById("meta-record-sld1_2").setAttribute("content", subTabSystems.subVersions.slide1.title2);
                 document.getElementById("record-title-sld1_2").innerHTML = subTabSystems.subVersions.slide1.title2;
                 document.getElementById("record-content-sld1_2").innerHTML = subTabSystems.subVersions.slide1.content2;
-                let lastSliderMeta = document.querySelectorAll(".meta-record-sld1_3");
-                lastSliderMeta.forEach(el => el.setAttribute("content", subTabSystems.subVersions.slide1.title3));
-                let lastSliderTitles = document.querySelectorAll(".record-title-sld1_3");
-                lastSliderTitles.forEach(el => el.innerHTML = subTabSystems.subVersions.slide1.title3);
-                let lastSliderContent = document.querySelectorAll(".record-content-sld1_3")
-                lastSliderContent.forEach(el => el.innerHTML = subTabSystems.subVersions.slide1.content3);
+                let preLastSliderMeta = document.querySelectorAll(".meta-record-sld1_3");
+                preLastSliderMeta.forEach(el => el.setAttribute("content", subTabSystems.subVersions.slide1.title3));
+                let preLastSliderTitles = document.querySelectorAll(".record-title-sld1_3");
+                preLastSliderTitles.forEach(el => el.innerHTML = subTabSystems.subVersions.slide1.title3);
+                let preLastSliderContent = document.querySelectorAll(".record-content-sld1_3")
+                preLastSliderContent.forEach(el => el.innerHTML = subTabSystems.subVersions.slide1.content3);
+                let lastSliderMeta = document.querySelectorAll(".meta-record-sld1_4");
+                lastSliderMeta.forEach(el => el.setAttribute("content", subTabSystems.subVersions.slide1.title4));
+                let lastSliderTitles = document.querySelectorAll(".record-title-sld1_4");
+                lastSliderTitles.forEach(el => el.innerHTML = subTabSystems.subVersions.slide1.title4);
+                let lastSliderContent = document.querySelectorAll(".record-content-sld1_4")
+                lastSliderContent.forEach(el => el.innerHTML = subTabSystems.subVersions.slide1.content4);
             }
             if (document.querySelector("#record-profile-internova")) {
                 document.getElementById("meta-record-sld2_1").setAttribute("content", subTabSystems.subVersions.slide2.title1);
