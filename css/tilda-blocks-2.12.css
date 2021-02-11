@@ -1439,7 +1439,7 @@
 }
 
 .t-align_left {
-    text-align: left
+    text-align: left;
 }
 
 .t-align_right {
@@ -2590,7 +2590,9 @@ img:not([src]) {
 }
 
 .logos {
-    text-align: center
+    text-align: center;
+    float: left;
+    padding-top: 5px;
 }
 
 .logos__width {

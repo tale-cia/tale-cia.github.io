@@ -355,6 +355,7 @@
 
 #record-footer-content .logos-ap {
     margin-top: 10px;
+    float: left;
 }
 
 .t-slds__arrow_container {
