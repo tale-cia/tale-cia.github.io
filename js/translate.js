@@ -391,6 +391,9 @@ function setTextContent() {
                 lastSliderTitles.forEach(el => el.innerHTML = subTabEquipment.subVersions.slide6.title5);
                 let lastSliderContent = document.querySelectorAll(".record-content-sld6_5")
                 lastSliderContent.forEach(el => el.innerHTML = subTabEquipment.subVersions.slide6.content5);
+                // dog nail to update some large boxes
+                t_slds_updateSlider('sills');
+                t_slds_positionArrows('sills');
             }
         }
     } else { setTimeout(changeLang, 50); }

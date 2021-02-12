@@ -164,7 +164,7 @@ if (!document.getElementById('t-phonemask-script')) {
         s.type = "text/javascript";
         s.async = true;
         s.id = 't-phonemask-script';
-        s.src = "images/js__tilda-phone-mask-1.1.min.js";
+        s.src = "js/js__tilda-phone-mask-1.1.min.js";
         if (w.opera == "[object Opera]") {
             d.addEventListener("DOMContentLoaded", f, false);
         } else {
