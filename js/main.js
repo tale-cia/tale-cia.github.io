@@ -178,3 +178,23 @@ if (!document.getElementById('t-phonemask-script')) {
         }
     });
 }
+
+if (!window.mainTracker) {
+    window.mainTracker = 'tilda';
+}(function(d, w, k, o, g) {
+    var n = d.getElementsByTagName(o)[0],
+        s = d.createElement(o),
+        f = function() {
+            n.parentNode.insertBefore(s, n);
+        };
+    s.type = "text/javascript";
+    s.async = true;
+    s.key = k;
+    s.id = "tildastatscript";
+    s.src = g;
+    if (w.opera == "[object Opera]") {
+        d.addEventListener("DOMContentLoaded", f, false);
+    } else {
+        f();
+    }
+})(document, window, '5b36f20db4f99e50afade13d06cc875d', 'script', 'https://stat.tildacdn.com/js/tildastat-0.2.min.js');
