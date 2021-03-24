@@ -182,32 +182,7 @@
     opacity: 0.5;
 }
 
-#record-contact-us-block input:-moz-placeholder {
-    color: #000000;
-    opacity: 0.5;
-}
-
 #record-contact-us-block input:-ms-input-placeholder {
-    color: #000000;
-    opacity: 0.5;
-}
-
-#record-contact-us-block textarea::-webkit-input-placeholder {
-    color: #000000;
-    opacity: 0.5;
-}
-
-#record-contact-us-block textarea::-moz-placeholder {
-    color: #000000;
-    opacity: 0.5;
-}
-
-#record-contact-us-block textarea:-moz-placeholder {
-    color: #000000;
-    opacity: 0.5;
-}
-
-#record-contact-us-block textarea:-ms-input-placeholder {
     color: #000000;
     opacity: 0.5;
 }
@@ -391,4 +366,3 @@
     justify-content: center;
     align-items: center;
 }
-
