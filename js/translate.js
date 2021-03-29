@@ -175,6 +175,7 @@ function setTextContent() {
                 document.getElementById("record-subtab-doors-mob1").innerHTML = subTabDoors.subTab1;
                 document.getElementById("record-subtab-doors-mob2").innerHTML = subTabDoors.subTab2;
                 document.getElementById("record-subtab-doors-mob3").innerHTML = subTabDoors.subTab3;
+                document.getElementById("record-subtab-doors-mob4").innerHTML = subTabDoors.subTab4;
             }
             if (document.querySelector("#record-single-leaf")) {
                 document.getElementById("meta-record-sld1_1").setAttribute("content", subTabDoors.subVersions.slide1.title1);
