@@ -170,6 +170,7 @@ function setTextContent() {
             document.getElementById("record-subtab-doors-1").innerHTML = subTabDoors.subTab1;
             document.getElementById("record-subtab-doors-2").innerHTML = subTabDoors.subTab2;
             document.getElementById("record-subtab-doors-3").innerHTML = subTabDoors.subTab3;
+            document.getElementById("record-subtab-doors-4").innerHTML = subTabDoors.subTab4;
             if (document.querySelector(".subtab__wrapper_mobile")) {
                 document.getElementById("record-subtab-doors-mob1").innerHTML = subTabDoors.subTab1;
                 document.getElementById("record-subtab-doors-mob2").innerHTML = subTabDoors.subTab2;
@@ -201,6 +202,17 @@ function setTextContent() {
                 lastSliderTitles.forEach(el => el.innerHTML = subTabDoors.subVersions.slide3.title1);
                 let lastSliderContent = document.querySelectorAll(".record-content-sld3_1")
                 lastSliderContent.forEach(el => el.innerHTML = subTabDoors.subVersions.slide3.content1);
+            }
+            if (document.querySelector("#record-hpl-doors")) {
+                document.getElementById("meta-record-sld4_1").setAttribute("content", subTabDoors.subVersions.slide4.title1);
+                document.getElementById("record-title-sld4_1").innerHTML = subTabDoors.subVersions.slide4.title1;
+                document.getElementById("record-content-sld4_1").innerHTML = subTabDoors.subVersions.slide4.content1;
+                let lastSliderMeta = document.querySelectorAll(".meta-record-sld4_2");
+                lastSliderMeta.forEach(el => el.setAttribute("content", subTabDoors.subVersions.slide4.title2));
+                let lastSliderTitles = document.querySelectorAll(".record-title-sld4_2");
+                lastSliderTitles.forEach(el => el.innerHTML = subTabDoors.subVersions.slide4.title2);
+                let lastSliderContent = document.querySelectorAll(".record-content-sld4_2")
+                lastSliderContent.forEach(el => el.innerHTML = subTabDoors.subVersions.slide4.content2);
             }
         }
         if (document.querySelector("#product-description-systems")) {

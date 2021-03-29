@@ -83,6 +83,7 @@ $(document).ready(function() {
             t_sldsInit('single-leaf');
             t_sldsInit('bivalve-shtulp');
             t_sldsInit('sliding-systems');
+            t_sldsInit('hpl-doors');
 
             $('.slider-block').bind('displayChanged', function() {
                 t_slds_updateSlider('single-leaf');
@@ -91,6 +92,8 @@ $(document).ready(function() {
                 t_slds_positionArrows('bivalve-shtulp');
                 t_slds_updateSlider('sliding-systems');
                 t_slds_positionArrows('sliding-systems');
+                t_slds_updateSlider('hpl-doors');
+                t_slds_positionArrows('hpl-doors');
             });
         }
         if (document.getElementById("record-subtab-equipment")) {
