@@ -223,43 +223,45 @@ function setTextContent() {
             let subTabSystems = JSON.parse(subTabSystemsData);
             document.getElementById("record-subtab-systems-1").innerHTML = subTabSystems.subTab1;
             document.getElementById("record-subtab-systems-2").innerHTML = subTabSystems.subTab2;
+            document.getElementById("record-subtab-systems-3").innerHTML = subTabSystems.subTab3;
+            document.getElementById("record-subtab-systems-4").innerHTML = subTabSystems.subTab4;
             if (document.querySelector(".subtab__wrapper_mobile")) {
                 document.getElementById("record-subtab-systems-mob1").innerHTML = subTabSystems.subTab1;
                 document.getElementById("record-subtab-systems-mob2").innerHTML = subTabSystems.subTab2;
+                document.getElementById("record-subtab-systems-mob3").innerHTML = subTabSystems.subTab3;
+                document.getElementById("record-subtab-systems-mob4").innerHTML = subTabSystems.subTab4;
             }
-            if (document.querySelector("#record-profile-wds")) {
-                document.getElementById("meta-record-sld1_1").setAttribute("content", subTabSystems.subVersions.slide1.title1);
-                document.getElementById("record-title-sld1_1").innerHTML = subTabSystems.subVersions.slide1.title1;
-                document.getElementById("record-content-sld1_1").innerHTML = subTabSystems.subVersions.slide1.content1;
-                document.getElementById("meta-record-sld1_2").setAttribute("content", subTabSystems.subVersions.slide1.title2);
-                document.getElementById("record-title-sld1_2").innerHTML = subTabSystems.subVersions.slide1.title2;
-                document.getElementById("record-content-sld1_2").innerHTML = subTabSystems.subVersions.slide1.content2;
-                let preLastSliderMeta = document.querySelectorAll(".meta-record-sld1_3");
-                preLastSliderMeta.forEach(el => el.setAttribute("content", subTabSystems.subVersions.slide1.title3));
-                let preLastSliderTitles = document.querySelectorAll(".record-title-sld1_3");
-                preLastSliderTitles.forEach(el => el.innerHTML = subTabSystems.subVersions.slide1.title3);
-                let preLastSliderContent = document.querySelectorAll(".record-content-sld1_3")
-                preLastSliderContent.forEach(el => el.innerHTML = subTabSystems.subVersions.slide1.content3);
-                let lastSliderMeta = document.querySelectorAll(".meta-record-sld1_4");
-                lastSliderMeta.forEach(el => el.setAttribute("content", subTabSystems.subVersions.slide1.title4));
-                let lastSliderTitles = document.querySelectorAll(".record-title-sld1_4");
-                lastSliderTitles.forEach(el => el.innerHTML = subTabSystems.subVersions.slide1.title4);
-                let lastSliderContent = document.querySelectorAll(".record-content-sld1_4")
-                lastSliderContent.forEach(el => el.innerHTML = subTabSystems.subVersions.slide1.content4);
+            if (document.querySelector("#record-profile-wds-1")) {
+                let preLastSliderMeta = document.querySelectorAll(".meta-record-sld1_1");
+                preLastSliderMeta.forEach(el => el.setAttribute("content", subTabSystems.subVersions.slide1.title1));
+                let preLastSliderTitles = document.querySelectorAll(".record-title-sld1_1");
+                preLastSliderTitles.forEach(el => el.innerHTML = subTabSystems.subVersions.slide1.title1);
+                let preLastSliderContent = document.querySelectorAll(".record-content-sld1_1")
+                preLastSliderContent.forEach(el => el.innerHTML = subTabSystems.subVersions.slide1.content1);
             }
-            if (document.querySelector("#record-profile-internova")) {
-                document.getElementById("meta-record-sld2_1").setAttribute("content", subTabSystems.subVersions.slide2.title1);
-                document.getElementById("record-title-sld2_1").innerHTML = subTabSystems.subVersions.slide2.title1;
-                document.getElementById("record-content-sld2_1").innerHTML = subTabSystems.subVersions.slide2.content1;
-                document.getElementById("meta-record-sld2_2").setAttribute("content", subTabSystems.subVersions.slide2.title2);
-                document.getElementById("record-title-sld2_2").innerHTML = subTabSystems.subVersions.slide2.title2;
-                document.getElementById("record-content-sld2_2").innerHTML = subTabSystems.subVersions.slide2.content2;
-                let lastSliderMeta = document.querySelectorAll(".meta-record-sld2_3");
-                lastSliderMeta.forEach(el => el.setAttribute("content", subTabSystems.subVersions.slide2.title3));
-                let lastSliderTitles = document.querySelectorAll(".record-title-sld2_3");
-                lastSliderTitles.forEach(el => el.innerHTML = subTabSystems.subVersions.slide2.title3);
-                let lastSliderContent = document.querySelectorAll(".record-content-sld2_3")
-                lastSliderContent.forEach(el => el.innerHTML = subTabSystems.subVersions.slide2.content3);
+            if (document.querySelector("#record-profile-wds-2")) {
+                let lastSliderMeta = document.querySelectorAll(".meta-record-sld2_1");
+                lastSliderMeta.forEach(el => el.setAttribute("content", subTabSystems.subVersions.slide2.title1));
+                let lastSliderTitles = document.querySelectorAll(".record-title-sld2_1");
+                lastSliderTitles.forEach(el => el.innerHTML = subTabSystems.subVersions.slide2.title1);
+                let lastSliderContent = document.querySelectorAll(".record-content-sld2_1")
+                lastSliderContent.forEach(el => el.innerHTML = subTabSystems.subVersions.slide2.content1);
+            }
+            if (document.querySelector("#record-profile-wds-3")) {
+                let preLastSliderMeta = document.querySelectorAll(".meta-record-sld3_1");
+                preLastSliderMeta.forEach(el => el.setAttribute("content", subTabSystems.subVersions.slide3.title1));
+                let preLastSliderTitles = document.querySelectorAll(".record-title-sld3_1");
+                preLastSliderTitles.forEach(el => el.innerHTML = subTabSystems.subVersions.slide3.title1);
+                let preLastSliderContent = document.querySelectorAll(".record-content-sld3_1")
+                preLastSliderContent.forEach(el => el.innerHTML = subTabSystems.subVersions.slide3.content1);
+            }
+            if (document.querySelector("#record-profile-wds-4")) {
+                let lastSliderMeta = document.querySelectorAll(".meta-record-sld4_1");
+                lastSliderMeta.forEach(el => el.setAttribute("content", subTabSystems.subVersions.slide4.title1));
+                let lastSliderTitles = document.querySelectorAll(".record-title-sld4_1");
+                lastSliderTitles.forEach(el => el.innerHTML = subTabSystems.subVersions.slide4.title1);
+                let lastSliderContent = document.querySelectorAll(".record-content-sld4_1")
+                lastSliderContent.forEach(el => el.innerHTML = subTabSystems.subVersions.slide4.content1);
             }
         }
         if (document.querySelector("#product-description-glazed-windows")) {

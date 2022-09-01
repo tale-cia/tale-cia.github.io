@@ -124,14 +124,20 @@ $(document).ready(function() {
         if (document.getElementById("record-subtab-systems")) {
             subTab_init('subtab-systems');
 
-            t_sldsInit('profile-wds');
-            t_sldsInit('profile-internova');
+            t_sldsInit('profile-wds-1');
+            t_sldsInit('profile-wds-2');
+            t_sldsInit('profile-wds-3');
+            t_sldsInit('profile-wds-4');
 
             $('.slider-block').bind('displayChanged', function() {
-                t_slds_updateSlider('profile-wds');
-                t_slds_positionArrows('profile-wds');
-                t_slds_updateSlider('profile-internova');
-                t_slds_positionArrows('profile-internova');
+                t_slds_updateSlider('profile-wds-1');
+                t_slds_positionArrows('profile-wds-1');
+                t_slds_updateSlider('profile-wds-2');
+                t_slds_positionArrows('profile-wds-2');
+                t_slds_updateSlider('profile-wds-3');
+                t_slds_positionArrows('profile-wds-3');
+                t_slds_updateSlider('profile-wds-4');
+                t_slds_positionArrows('profile-wds-4');
             });
         }
         if (document.getElementById("record-subtab-glazed-windows")) {
