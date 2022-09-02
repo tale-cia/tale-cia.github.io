@@ -57,6 +57,17 @@ $(document).ready(function() {
 
     if (document.getElementById("record-our-production")) { ourProduction_init('our-production'); }
 
+    if (document.getElementById("record-contact-block")) {
+        let contactLink1 = document.getElementById("record-contact-1");
+        contactLink1.addEventListener("click", function() {
+          document.getElementById("google-frame").src = "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2543.3857123115145!2d30.48955181557548!3d50.39664887946797!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4c8d036c32ff3%3A0x5e58db92c29d208!2sKozatska%20St%2C%20122%2C%20Kyiv%2C%2002000!5e0!3m2!1sen!2sua!4v1661091252075!5m2!1sen!2sua";
+        });
+        let contactLink2 = document.getElementById("record-contact-2");
+        contactLink2.addEventListener("click", function() {
+          document.getElementById("google-frame").src = "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d8916.080286406364!2d30.301895388783652!3d50.261483401638245!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4b12746abcf75%3A0x703ad5587aae9551!2z0LLRg9C7LiDQkdC-0YLQsNC90ZbRh9C90LAsIDE10LAsINCT0LvQtdCy0LDRhdCwLCDQmtC40ZfQstGB0YzQutCwINC-0LHQuy4sIDA4NjMx!5e0!3m2!1suk!2sua!4v1662104986448!5m2!1suk!2sua";
+        });
+    }
+
     if (document.querySelector(".subtab-record")) {
         if (document.getElementById("record-subtab-windows")) {
             subTab_init('subtab-windows');

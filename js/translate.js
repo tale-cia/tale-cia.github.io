@@ -109,12 +109,18 @@ function setTextContent() {
                 document.getElementById("record-subtab-windows-mob4").innerHTML = subTabWindows.subTab4;
             }
             if (document.querySelector("#record-standart-w")) {
-                document.getElementById("meta-record-sld1_1").setAttribute("content", subTabWindows.subVersions.slide1.title1);
-                document.getElementById("record-title-sld1_1").innerHTML = subTabWindows.subVersions.slide1.title1;
-                document.getElementById("record-content-sld1_1").innerHTML = subTabWindows.subVersions.slide1.content1;
-                document.getElementById("meta-record-sld1_2").setAttribute("content", subTabWindows.subVersions.slide1.title2);
-                document.getElementById("record-title-sld1_2").innerHTML = subTabWindows.subVersions.slide1.title2;
-                document.getElementById("record-content-sld1_2").innerHTML = subTabWindows.subVersions.slide1.content2;
+                let firstSliderMeta = document.querySelectorAll(".meta-record-sld1_1");
+                firstSliderMeta.forEach(el => el.setAttribute("content", subTabWindows.subVersions.slide1.title1));
+                let firstSliderTitles = document.querySelectorAll(".record-title-sld1_1");
+                firstSliderTitles.forEach(el => el.innerHTML = subTabWindows.subVersions.slide1.title1);
+                let firstSliderContent = document.querySelectorAll(".record-content-sld1_1")
+                firstSliderContent.forEach(el => el.innerHTML = subTabWindows.subVersions.slide1.content1);
+                let secondSliderMeta = document.querySelectorAll(".meta-record-sld1_2");
+                secondSliderMeta.forEach(el => el.setAttribute("content", subTabWindows.subVersions.slide1.title2));
+                let secondSliderTitles = document.querySelectorAll(".record-title-sld1_2");
+                secondSliderTitles.forEach(el => el.innerHTML = subTabWindows.subVersions.slide1.title2);
+                let secondSliderContent = document.querySelectorAll(".record-content-sld1_2")
+                secondSliderContent.forEach(el => el.innerHTML = subTabWindows.subVersions.slide1.content2);
                 let lastSliderMeta = document.querySelectorAll(".meta-record-sld1_3");
                 lastSliderMeta.forEach(el => el.setAttribute("content", subTabWindows.subVersions.slide1.title3));
                 let lastSliderTitles = document.querySelectorAll(".record-title-sld1_3");

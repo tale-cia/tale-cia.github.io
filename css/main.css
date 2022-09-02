@@ -322,11 +322,20 @@
 }
 
 .t-slds__bullet:hover .t-slds__bullet_body {
-    background-color: #222 !important;
+    background-color: #5F6260 !important;
+    border: 1px solid #434644 !important;
 }
 
 .t-slds__bullet_active .t-slds__bullet_body {
-    background-color: #222 !important;
+    background-color: #5F6260 !important;
+    border: 1px solid #434644 !important;
+}
+
+.t-slds__bullet_body {
+    width: 18px;
+    height: 18px;
+    background-color: #ffffff !important; 
+    border: 2px solid #BBBBBB;
 }
 
 #record-footer-content .footer-block__descr .logos:nth-child(2) {
@@ -370,4 +379,8 @@
 .button_dveri {
     width: 160px;
     margin-top: 10px;
+}
+
+.contact-hover {
+    cursor: pointer;
 }
